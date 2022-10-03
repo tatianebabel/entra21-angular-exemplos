@@ -1,0 +1,16 @@
+import { VacinaDetalheComponent } from './vacina-detalhe/vacina-detalhe.component';
+import { VacinaListagemComponent } from './vacina-listagem/vacina-listagem.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: VacinaListagemComponent},
+  { path: 'detalhe', component: VacinaDetalheComponent},
+  { path:'detalhe/:id', component:VacinaDetalheComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class VacinasRoutingModule { }
